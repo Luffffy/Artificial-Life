@@ -6,7 +6,8 @@ public class RobotController : MonoBehaviour {
 
     public float MaxHealth { get; set; }
     public float CurrentHealth { get; set; }
-    //public float Attack { get; set; }
+    public float AttackMin { get; set; }
+    public float AttackMax { get; set; }
     public float Defense { get; set; }
     public float Speed { get; set; }
     public bool isProtected { get; set; }

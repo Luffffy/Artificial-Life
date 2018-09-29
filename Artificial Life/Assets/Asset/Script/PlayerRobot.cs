@@ -9,10 +9,16 @@ public class PlayerRobot : RobotController {
 
     // Use this for initialization
     void Start () {
+        MaxHealth = 100;
+        CurrentHealth = 100;
+        AttackMin = 10;
+        AttackMax = 20;
+        Defense = 0;
+        Speed = 10;
         RobotMove move1 = new RobotMove();
         move1.Name = "Robo Punch"
         move1.Description = "Attack the enemy once with a physical strike."
-        move1.Power = 76;
+        move1.Power = 10;
         move1.Accuracy = 100;
         move1.Type = RobotMoveType.Attack;
         MoveSet.add (move1)
@@ -21,7 +27,7 @@ public class PlayerRobot : RobotController {
         RobotMove move2 = new RobotMove();
         move2.Name = "Block"
         move2.Description = "Defend against an enemy attack."
-        move2.Power = 0;
+        move2.Power = 10;
         move2.Accuracy = 100;
         move2.Type = RobotMoveType.Defend;
         MoveSet.add (move2)
@@ -29,7 +35,7 @@ public class PlayerRobot : RobotController {
         RobotMove move3 = new RobotMove();
         move3.Name = "Power Up"
         move3.Description = "Increase your attack power."
-        move3.Power = 0;
+        move3.Power = 10;
         move3.Accuracy = 100;
         move3.Type = RobotMoveType.Buff;
         MoveSet.add (move3)
@@ -37,7 +43,7 @@ public class PlayerRobot : RobotController {
         RobotMove move4 = new RobotMove();
         move4.Name = "Disruptor"
         move4.Description = "Decrease the enemies' defense."
-        move4.Power = 0;
+        move4.Power = 5;
         move4.Accuracy = 100;
         move4.Type = RobotMoveType.Debuff;
         MoveSet.add (move4)
