@@ -9,6 +9,12 @@ public class EnemyRobot : RobotController {
 
     // Use this for initialization
     void Start () {
+        MaxHealth = 100;
+        CurrentHealth = 100;
+        AttackMin = 10;
+        AttackMax = 20;
+        Defense = 0;
+        Speed = 10;
         RobotMove move1 = new RobotMove();
         move1.Name = "Karate Chop";
         move1.Description = "Attack the enemy once with a physical strike.";

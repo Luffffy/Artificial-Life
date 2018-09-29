@@ -16,21 +16,25 @@ public class BattleController : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-        Debug.Log("Select a move (1-4)");
-        if (Input.GetButtonDown("1"))
+        //Debug.Log("Select a move (1-4)");
+        if (Input.GetKeyDown(KeyCode.Alpha1))
         {
+            Debug.Log("Move 1 Selected");
             Move(Player.MoveSet[0], Enemy);
         }
-        else if (Input.GetButtonDown("2"))
+        else if (Input.GetKeyDown(KeyCode.Alpha2))
         {
+            Debug.Log("Move 2 Selected");
             Move(Player.MoveSet[1], Enemy);
         }
-        else if (Input.GetButtonDown("3"))
+        else if (Input.GetKeyDown(KeyCode.Alpha3))
         {
+            Debug.Log("Move 3 Selected");
             Move(Player.MoveSet[2], Enemy);
         }
-        else if (Input.GetButtonDown("4"))
+        else if (Input.GetKeyDown(KeyCode.Alpha4))
         {
+            Debug.Log("Move 4 Selected");
             Move(Player.MoveSet[3], Enemy);
         }
         Debug.Log("Enemy Turn");
