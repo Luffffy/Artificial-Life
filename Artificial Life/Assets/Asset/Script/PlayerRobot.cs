@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerRobot : RobotController {
 
     private RobotAttack currentAttack;
-    private EnemyRobot currentEnemyTarget;
+    private EnemyRobot currentEnemy;
 
     // Use this for initialization
     void Start () {
