@@ -4,14 +4,20 @@ using UnityEngine;
 
 public class RobotController : MonoBehaviour {
 
-    public float MaxHealth { get; set; }
-    public float CurrentHealth { get; set; }
-    public float AttackMin { get; set; }
-    public float AttackMax { get; set; }
-    public float Defense { get; set; }
-    public float Speed { get; set; }
-    public bool isProtected { get; set; }
-    public List<RobotMove> MoveSet { get; set; }
+    public string Name;
+    public float MaxHealth;
+    public float CurrentHealth;
+    public float AttackMin;
+    public float AttackMax;
+    public float BaseAttackMin;
+    public float BaseAttackMax;
+    public float BaseDefense;
+    public float Defense;
+    public float Speed;
+    public bool isProtected;
+    public int buffCounter;
+    public int debuffCounter;
+    public List<RobotMove> MoveSet;
 
 
 

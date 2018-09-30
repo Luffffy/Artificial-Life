@@ -6,21 +6,30 @@ public class EnemyRobot : RobotController {
 
     private RobotAttack currentAttack;
     private EnemyRobot currentEnemyTarget;
+    public List<float> Chance;
 
     // Use this for initialization
     void Start () {
+        Name = "Enemy";
         MaxHealth = 100;
         CurrentHealth = 100;
+        BaseAttackMin = 10;
+        BaseAttackMax = 20;
         AttackMin = 10;
         AttackMax = 20;
+        BaseDefense = 0;
         Defense = 0;
         Speed = 10;
+        buffCounter = 0;
+        debuffCounter = 0;
+
         RobotMove move1 = new RobotMove();
         move1.Name = "Karate Chop";
         move1.Description = "Attack the enemy once with a physical strike.";
         move1.Power = 76;
         move1.Accuracy = 100;
         move1.Type = RobotMoveType.Attack;
+        Chance.Add(25);
         MoveSet.Add(move1);
 
 
@@ -30,6 +39,7 @@ public class EnemyRobot : RobotController {
         move2.Power = 0;
         move2.Accuracy = 100;
         move2.Type = RobotMoveType.Defend;
+        Chance.Add(25);
         MoveSet.Add(move2);
 
         RobotMove move3 = new RobotMove();
@@ -38,6 +48,7 @@ public class EnemyRobot : RobotController {
         move3.Power = 0;
         move3.Accuracy = 100;
         move3.Type = RobotMoveType.Buff;
+        Chance.Add(25);
         MoveSet.Add(move3);
 
         RobotMove move4 = new RobotMove();
@@ -46,6 +57,7 @@ public class EnemyRobot : RobotController {
         move4.Power = 38;
         move4.Accuracy = 100;
         move4.Type = RobotMoveType.Attack;
+        Chance.Add(25);
         MoveSet.Add(move4);
 
     }

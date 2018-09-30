@@ -6,15 +6,23 @@ public class PlayerRobot : RobotController {
 
     private RobotAttack currentAttack;
     private EnemyRobot currentEnemy;
+    
 
     // Use this for initialization
     void Start () {
+        Name = "Player";
         MaxHealth = 100;
         CurrentHealth = 100;
+        BaseAttackMin = 10;
+        BaseAttackMax = 20;
         AttackMin = 10;
         AttackMax = 20;
+        BaseDefense = 0;
         Defense = 0;
         Speed = 10;
+        buffCounter = 0;
+        debuffCounter = 0;
+
         RobotMove move1 = new RobotMove();
         move1.Name = "Robo Punch";
         move1.Description = "Attack the enemy once with a physical strike.";
