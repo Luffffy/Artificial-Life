@@ -32,7 +32,7 @@ public class BattleController : MonoBehaviour {
             Debug.Log("Enemy Turn");
             EnemyTurn();
         }
-        //checkEnd
+        checkEnd();
 
     }
 
@@ -126,5 +126,15 @@ public class BattleController : MonoBehaviour {
 
         Move(Enemy.MoveSet[chose], Enemy, Player);
 
+    }
+
+    public void checkEnd()
+    {
+        if(Player.CurrentHealth <= 0 || Enemy.CurrentHealth <= 0)
+        {
+            EndGame = true;
+            Debug.Log("GameOver");
+            Application.LoadLevel("Battle UI");
+        }
     }
 }

@@ -35,7 +35,7 @@ public class PlayerRobot : RobotController {
         RobotMove move2 = new RobotMove();
         move2.Name = "Block";
         move2.Description = "Defend against an enemy attack.";
-        move2.Power = 0;
+        move2.Power = 10;
         move2.Accuracy = 100;
         move2.Type = RobotMoveType.Defend;
         MoveSet.Add(move2);
@@ -43,7 +43,7 @@ public class PlayerRobot : RobotController {
         RobotMove move3 = new RobotMove();
         move3.Name = "Power Up";
         move3.Description = "Increase your attack power.";
-        move3.Power = 0;
+        move3.Power = 10;
         move3.Accuracy = 100;
         move3.Type = RobotMoveType.Buff;
         MoveSet.Add(move3);
@@ -51,7 +51,7 @@ public class PlayerRobot : RobotController {
         RobotMove move4 = new RobotMove();
         move4.Name = "Disruptor";
         move4.Description = "Decrease the enemies' defense.";
-        move4.Power = 0;
+        move4.Power = 10;
         move4.Accuracy = 100;
         move4.Type = RobotMoveType.Debuff;
         MoveSet.Add(move4);
